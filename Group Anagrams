@@ -1,0 +1,16 @@
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        dictionary={}
+        for anag in strs:
+            sortedAnag=''.join(sorted(anag))
+            if sortedAnag in dictionary:
+                dictionary[sortedAnag]+=[anag]
+            else:
+                 dictionary[sortedAnag]=[anag]
+        return([dictionary[i] for i in dictionary])
+    
+
+
+            
+
+        
